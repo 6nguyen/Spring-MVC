@@ -10,7 +10,9 @@
 
 <hr>
 
-<a href="showForm">Form</a>
+<a href="showForm">Hello Form</a>
+<a href="goodbye/showForm">Goodbye Form</a>
+
 </body>
 
 </html>
