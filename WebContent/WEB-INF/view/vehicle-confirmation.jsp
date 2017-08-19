@@ -10,9 +10,11 @@
 	
 	The vehicle has been registered.
 	<br><br>
-	Number of wheels: ${motorcycle.numWheels}
+	Number of wheels: ${vehicle.numWheels}
 	<br>
-	Make: ${motorcycle.make}
+	Make: ${vehicle.make}
+	<br>
+	Class: ${vehicle.vehicleClass}
 </body>
 
 </html>
