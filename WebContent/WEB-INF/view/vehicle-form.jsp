@@ -27,12 +27,21 @@
 		<br/>
 		
 		Vehicle Class: 
+		<!-- items returns our list of vehicleOptions in the Vehicle class -->
 		<form:select path="vehicleClass">
 			<form:options items="${vehicle.vehicleOptions}" />
-			
-			<%-- <form:option value="Economy" label="Economy"/>
-			<form:option value="Sport" label="Sport"/>
-			<form:option value="Electric" label="Electric"/> --%>
+		</form:select>
+		<br/>
+		
+		Color:
+		<form:select path="vehicleColor" >
+			<form:options items="${colorOptions}" />
+		</form:select>
+		<br/>
+		
+		Manufactured in:
+		<form:select path="vehicleCountry" >
+			<form:options items="${countryOptions}" />
 		</form:select>
 		<br/>
 		

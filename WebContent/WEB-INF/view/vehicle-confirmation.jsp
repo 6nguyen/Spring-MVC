@@ -14,7 +14,9 @@
 	<br>
 	Make: ${vehicle.make}
 	<br>
-	Class: ${vehicle.vehicleClass}
+	Class: ${vehicle.vehicleCountry}
+	<br>
+	Color: ${vehicle.vehicleColor}
 </body>
 
 </html>
