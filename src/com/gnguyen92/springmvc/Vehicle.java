@@ -12,6 +12,7 @@ public class Vehicle {
 	private String vehicleClass;
 	private String vehicleColor;
 	private String vehicleCountry;
+	private String priceRange;
 	
 
 	private List<String> vehicleOptions;
@@ -90,6 +91,14 @@ public class Vehicle {
 
 	public void setCountryOptions(Map<String, String> countryOptions) {
 		this.countryOptions = countryOptions;
+	}
+
+	public String getPriceRange() {
+		return priceRange;
+	}
+
+	public void setPriceRange(String priceRange) {
+		this.priceRange = priceRange;
 	}
 
 }

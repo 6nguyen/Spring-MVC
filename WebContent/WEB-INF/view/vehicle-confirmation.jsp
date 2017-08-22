@@ -14,9 +14,12 @@
 	<br>
 	Make: ${vehicle.make}
 	<br>
-	Class: ${vehicle.vehicleCountry}
-	<br>
 	Color: ${vehicle.vehicleColor}
+	<br>
+	Manufactured in: ${vehicle.getVehicleCountry()}
+	<br>
+	Price: ${vehicle.priceRange}
+	
 </body>
 
 </html>

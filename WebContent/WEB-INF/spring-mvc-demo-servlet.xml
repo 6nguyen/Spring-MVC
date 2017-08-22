@@ -29,9 +29,9 @@
 		<property name="suffix" value=".jsp" />
 	</bean>
 	
-	<!-- Step 7: load color.properties -->
+	<!-- Step 7: load color.properties file and country.properties file-->
 	<util:properties id="colorOptions" location="classpath:../color.properties" />
-	<util:properties id="countryOptions" location="classpath:../class.properties" />
+	<util:properties id="countryOptions" location="classpath:../country.properties" />
 
 </beans>
 

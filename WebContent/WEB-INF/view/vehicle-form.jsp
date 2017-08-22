@@ -45,6 +45,13 @@
 		</form:select>
 		<br/>
 		
+		<!-- form:radiobutton calls vehicle.setPriceRange() -->
+		Price Range:
+		<form:radiobutton path="priceRange" value="Under $10,000" />Under $10,000  
+		<form:radiobutton path="priceRange" value="$10,000-$15,000" />$10,000-$15,000  
+		<form:radiobutton path="priceRange" value="$15,000 and above" />$15,000 and above   
+		
+		<br><br>
 		<input type="submit" value="Register" />
 	
 	</form:form>
