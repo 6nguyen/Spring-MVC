@@ -43,13 +43,21 @@
 		<form:select path="vehicleCountry" >
 			<form:options items="${countryOptions}" />
 		</form:select>
-		<br/>
+		<br/><br/>
 		
 		<!-- form:radiobutton calls vehicle.setPriceRange() -->
 		Price Range:
 		<form:radiobutton path="priceRange" value="Under $10,000" />Under $10,000  
 		<form:radiobutton path="priceRange" value="$10,000-$15,000" />$10,000-$15,000  
-		<form:radiobutton path="priceRange" value="$15,000 and above" />$15,000 and above   
+		<form:radiobutton path="priceRange" value="$15,000 and above" />$15,000 and above  
+		<br/> 
+		
+		<!-- form:checkbox calls vehicle.setFeatures -->
+		Features:
+		<form:checkbox path="features" value="ABS" />ABS
+		<form:checkbox path="features" value="leather seats" />leather seats
+		<form:checkbox path="features" value="power seats" />power seats
+		<form:checkbox path="features" value="sun roof" />sun roof
 		
 		<br><br>
 		<input type="submit" value="Register" />

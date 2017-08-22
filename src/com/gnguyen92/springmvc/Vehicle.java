@@ -9,10 +9,11 @@ public class Vehicle {
 	
 	private int numWheels;
 	private String make;
-	private String vehicleClass;
-	private String vehicleColor;
-	private String vehicleCountry;
-	private String priceRange;
+	private String vehicleClass;		// <form:select using a List<String> instantiated in Vehicle.java
+	private String vehicleColor;		// <form:select using @Value Map<String, String> properties file injection 
+	private String vehicleCountry;		// <form:select using @Value Map<String, String> properties file injection
+	private String priceRange;			// <form:radiobutton created in vehicle-form.jsp
+	private String features;			// <form:checkbox created in vehicle-form.jsp
 	
 
 	private List<String> vehicleOptions;
@@ -100,5 +101,14 @@ public class Vehicle {
 	public void setPriceRange(String priceRange) {
 		this.priceRange = priceRange;
 	}
+
+	public String getFeatures() {
+		return features;
+	}
+
+	public void setFeatures(String features) {
+		this.features = features;
+	}
+	
 
 }
