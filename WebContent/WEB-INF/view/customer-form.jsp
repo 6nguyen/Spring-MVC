@@ -16,12 +16,12 @@
 
 	<i>Fields with an (*) are required.</i><br><br>
 	<form:form method="GET" action="processForm" modelAttribute="customer" >
-		First Name*: <form:input path="firstName" /><br><br>
-		<form:errors path="firstName" cssClass="error" />
-		Last Name*: <form:input path="lastName" /><br><br>
-		<form:errors path="lastName" cssClass="error" />
-		Password*:  <form:password path="password" /><br><br>
-		<form:errors path="password" cssClass="error" />
+		First Name*: <form:input path="firstName" />
+		<form:errors path="firstName" cssClass="error" /><br><br>
+		Last Name*: <form:input path="lastName" />
+		<form:errors path="lastName" cssClass="error" /><br><br>
+		Password*:  <form:password path="password" />
+		<form:errors path="password" cssClass="error" /><br><br>
 		
 		<input type="submit" value="Login" />
 	</form:form>
