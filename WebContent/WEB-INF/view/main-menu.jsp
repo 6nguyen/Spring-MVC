@@ -12,7 +12,8 @@
 
 <a href="showForm">Hello Form</a> | 
 <a href="goodbye/showForm">Goodbye Form</a> | 
-<a href="vehicle/showForm">Vehicle Form</a>
+<a href="vehicle/showForm">Vehicle Form</a> |
+<a href="customer/showForm">Customer Form</a> |
 
 </body>
 

@@ -11,14 +11,14 @@ import javax.validation.constraints.Size;
 
 public class Customer {
 
-	@NotNull(message="is required")
-	@Size(min=2)
+	@NotNull(message="is required.")
+	@Size(min=2, message="First name must be at least 2 characters long.")
 	private String firstName;
-	@NotNull(message="is required")
-	@Size(min=2)
+	@NotNull(message="is required.")
+	@Size(min=2, message="Last name must be at least 2 characters long.")
 	private String lastName;
-	@NotNull(message="is required")
-	@Size(min=2)
+	@NotNull(message="is required.")
+	@Size(min=2, message="Password must be at least 2 characters long.")
 	private String password;
 	
 	
@@ -34,6 +34,12 @@ public class Customer {
 	}
 	public void setLastName(String lastName) {
 		this.lastName = lastName;
+	}
+	public String getPassword() {
+		return password;
+	}
+	public void setPassword(String password) {
+		this.password = password;
 	}
 	
 	
