@@ -14,21 +14,24 @@ public class Customer {
 
 	// @NotNull specifies a required field
 	@NotNull(message=" is required.")
-	@Size(min=2, message=" must be at least 2 characters long.")
+	@Size(min=2, max=15, message=" must be at least 2 characters long.")
+	@Pattern(regexp="[a-zA-Z]+")
 	private String firstName;
 	
 	@NotNull(message=" is required.")
-	@Size(min=2, message=" must be at least 2 characters long.")
+	@Size(min=2, max=15, message=" must be at least 2 characters long.")
+	@Pattern(regexp="[a-zA-Z]+")
 	private String lastName;
 	
 	@NotNull(message=" is required.")
-	@Size(min=2, message=" must be at least 2 characters long.")
+	@Size(min=2, max=15, message=" must be at least 2 characters long.")
 	private String password;
 	
+	@Size(max=37)
 	private String address;
 	
 	// @Pattern forces field to follow a regex pattern
-	// regular expression code: only digits 0-9 allowed.  Only 5 characters allowed. [a-zA-Z] only alphabet allowed
+	// regular expression code: only digits 0-9 allowed.  Only accepts 5 characters. [a-zA-Z] only alphabet allowed
 	@NotNull(message=" is required.")
 	@Pattern(regexp="[0-9]{5}", message=" invalid Zip Code.")
 	private String zipcode;
