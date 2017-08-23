@@ -34,6 +34,8 @@ public class CustomerController {
 		System.out.println(">> CustomerController: firstName = |" + thisCustomer.getFirstName() + "|");
 		System.out.println(">> CustomerController: lastName = |" + thisCustomer.getLastName() + "|");
 		System.out.println(">> CustomerController: password = |" + thisCustomer.getPassword() + "|");
+		System.out.println(">> CustomerController: BindingResult = " + bindingResult);
+		System.out.println("================================================================== \n\n\n");
 		
 		// if there's a binding error, send back to customer-form.jsp
 		if(bindingResult.hasErrors()){

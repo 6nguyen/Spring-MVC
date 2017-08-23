@@ -7,6 +7,7 @@
 	<style>
 		.error{
 			color:red;
+			font-style:italic;
 		}
 	</style>
 </head>
