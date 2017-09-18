@@ -1,3 +1,4 @@
+// Customer Class with form validation using Java Annotations
 package com.gnguyen92.springmvc;
 
 import javax.validation.constraints.NotNull;
@@ -9,6 +10,8 @@ import javax.validation.constraints.Pattern;
  *  
  *  */
 import javax.validation.constraints.Size;
+
+import com.gnguyen92.springmvc.validation.Password;
 
 public class Customer {
 
@@ -25,6 +28,8 @@ public class Customer {
 	
 	@NotNull(message=" is required.")
 	@Size(min=2, max=15, message=" must be at least 2 characters long.")
+	// Using custom annotation @Password to require the password to contain Password.value()
+	@Password(value="!", message=" must contain \"!\"")
 	private String password;
 	
 	@Size(max=37)

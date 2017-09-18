@@ -36,21 +36,23 @@ public @interface Password {
 	// Define default password
 	// create an attribute called value that the user will pass in
 	// if the user doesn't pass anything, it will default to A.1
-	public String value() default "A";
+	public String value() default "1";
 	
 	// define default message
 	// the Bean Validation API MUST have an attribute "message" that contains an error message
-	public String message = "must contain at least one capital letter, special character, and number.";
+	public String message() default "must contain a \"1\".";
 	
 	// define default groups (group validation constraints together)
 	// Bean Validation API MUST have an attribute "groups" that specifies which validation groups this constraint belongs to.
-	// 		groups MUST default to an emptry array
+	// 		groups MUST at least default to an empty array
 	// our @Password annotation contains an attribute "groups", that is NOT A METHOD.  This is the syntax for an attribute
 	// the annotation contains a generic Array of Class objects.  Class<?>[]
 	// the annotation also has a default value of an empty array.  default {}
 	public Class<?>[] groups() default {};
 	
 	// define default payload (give additional info about validation error)
-	public Class<? extends Payload>[] payload() default{}; 	
+	// the annotation has a default payload value of an empty array.  default {}
+	public Class<? extends Payload>[] payload() default {}; 	
 
 }
+
