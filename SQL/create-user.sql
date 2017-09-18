@@ -1,3 +1,3 @@
-CREATE USER 'hbstudent'@'localhost' IDENTIFIED BY 'hbstudent';
+CREATE USER 'hibernateStudent'@'localhost' IDENTIFIED BY 'hibernateStudent';
 
-GRANT ALL PRIVILEGES ON * . * TO 'hbstudent'@'localhost';
+GRANT ALL PRIVILEGES ON * . * TO 'hibernateStudent'@'localhost';
