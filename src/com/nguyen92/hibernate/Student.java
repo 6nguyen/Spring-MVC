@@ -2,6 +2,8 @@ package com.nguyen92.hibernate;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
@@ -11,7 +13,9 @@ public class Student {
 
 	// instance variables to match student database columns
 	// use Java annotations to map Entity Class member variables to MySQL db
+	// @Id signifies Primary Key
 	@Id
+	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	@Column(name="id")
 	private int id;
 	
