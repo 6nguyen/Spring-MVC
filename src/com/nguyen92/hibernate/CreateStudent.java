@@ -32,17 +32,18 @@ public class CreateStudent {
 		// use the session object to save Java object
 			// create a student object			
 			System.out.println("Creating new Student object.");
-			Student temp = new Student("George", "Nguyen", "george@gmail.com");
+			Student temp = new Student("Ryan", "Murke", "murke@gmail.com");
 			
 			// start a transaction			
 			session.beginTransaction();
 			
 			// save the student object
-			System.out.println("Saving the student");
+			System.out.println("Saving the student.");
 			session.save(temp);			
 			
 			// commit transaction to db
 			session.getTransaction().commit();
+			System.out.println("Student committed to MySQL DB");
 		}
 		finally {
 			factory.close();
