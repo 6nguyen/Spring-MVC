@@ -14,3 +14,12 @@ CREATE TABLE `student` (
 
 /*  Change the id Primary Key value to start from 1000 from this point on  */
 ALTER TABLE hb_student_tracker.student AUTO_INCREMENT = 1000;
+
+/*  Add column Date of Birth to Student table */
+ALTER TABLE hb_student_tracker.student 
+ADD COLUMN `date_of_birth` 
+DATETIME NULL
+AFTER `email`;
+
+/* Update students to have a date_of_birth */
+UPDATE Student SET date_of_birth='03/24/1990' WHERE date_of_birth=null;
