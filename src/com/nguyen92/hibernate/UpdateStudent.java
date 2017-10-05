@@ -5,13 +5,16 @@
 
 package com.nguyen92.hibernate;
 
+import java.text.ParseException;
+import java.util.Date;
+
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.cfg.Configuration;
 
 public class UpdateStudent {
 
-	public static void main(String[] args) {
+	public static void main(String[] args) throws ParseException {
 
 		// Create a Session Factory
 		SessionFactory factory = new Configuration()
@@ -56,6 +59,21 @@ public class UpdateStudent {
 								+ "WHERE id=7").executeUpdate();
 			
 			// commit transaction
+			session.getTransaction().commit();
+			
+			
+			/* ********************************************************
+			 * *******  Update MULTIPLE records directly in db  *******
+			 * ******************************************************** */
+			session = factory.getCurrentSession();
+			session.beginTransaction();
+			
+			String dobString = "04/22/1994";
+			Date dob = DateUtil.parseDate(dobString);
+			
+			session.createQuery("UPDATE Student "
+								+ "SET dateOfBirth=" + dob).executeUpdate();
+			
 			session.getTransaction().commit();
 			
 		} finally{
